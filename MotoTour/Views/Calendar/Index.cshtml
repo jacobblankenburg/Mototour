@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>jQuery fullcalendar demo</h2>
+
+<div id=~/Content/fullcalendar.css" rel="stylesheet"></div>
+
+@section Scripts {
+
+    <script type="text/javascript">
+    $(function () {
+        $('#fullcalendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,basicWeek,basicDay'
+            },
+            defaultDate: new Date(),
+            events: "/api/event/"
+        });
+    });
+    </script>
+
+}
